@@ -12,19 +12,20 @@
             <!--left-->
             <div class="left-blog-info-w3layouts-agileits text-left">
                 <div class="row">
-                    @foreach(var item in Model)
+                    @foreach (var item in Model)
                     {
-                    
+
                         <a href="/Blog/BlogReadAll/@item.BlogID">
                             <img src="@item.BlogImage" class="card-img-top img-fluid" alt="">
                         </a>
                         <div class="card-body">
                             <ul class="blog-icons my-4">
-                                <li><div class="col-lg-4 card">
-    <a href="#">
-        <i class="far fa-calendar-alt"></i> @(((DateTime)item.BlogCreateDate).ToString("dd-MMM-yy"))
-    </a>
-</li>
+                                <li>
+                                    <div class="col-lg-4 card">
+                                        <a href="#">
+                                            <i class="far fa-calendar-alt"></i> @(((DateTime)item.BlogCreateDate).ToString("dd-MMM-yy"))
+                                        </a>
+                                </li>
                                 <li class="mx-2">
                                     <a href="#">
                                         <i class="far fa-comment"></i> 0
@@ -40,10 +41,11 @@
                             <h5 class="card-title">
                                 <a href="/Blog/BlogReadAll/@item.BlogID">@item.BlogTitle</a>
                             </h5>
-                            <p class="card-text mb-3">@item.BlogContent.Substring(0,item.BlogContent.Substring(0,130).LastIndexOf(" "))...</p>
+                            <p class="card-text mb-3">@item.BlogContent.Substring(0, item.BlogContent.Substring(0, 130).LastIndexOf(" "))...</p>
                             <a href="/Blog/BlogReadAll/@item.BlogID" class="btn btn-primary read-m">Devamı..</a>
                         </div>
-                    </div> 
+
+                        <!--//left-->
                     }
                 </div>
                 <!--//left-->
